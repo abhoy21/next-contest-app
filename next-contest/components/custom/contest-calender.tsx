@@ -24,9 +24,15 @@ export default function ContestCalendar(): React.JSX.Element {
   useEffect(() => {
     const fetchContests = async () => {
       const responses = await Promise.all([
-        axios.get("http://localhost:8000/api/v1/codeforces/contests"),
-        axios.get("http://localhost:8000/api/v1/leetcode/contests"),
-        axios.get("http://localhost:8000/api/v1/codechef/contests"),
+        axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/codeforces/contests`
+        ),
+        axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/leetcode/contests`
+        ),
+        axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/codechef/contests`
+        ),
       ]);
 
       const allContests = [
