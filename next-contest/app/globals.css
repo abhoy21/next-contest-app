@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+body {
+  font-family: Arial, Helvetica, sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif, atkinson-hyperlegible;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 7% / 1;
+    --foreground: 0 0% 98%;
+    --card: 173 77% 22%; /* Keppel-800 */
+    --card-foreground: 0 0% 98%;
+    --popover: 173 77% 22%; /* Keppel-800 */
+    --popover-foreground: 0 0% 98%;
+    --primary: 173 77% 40%; /* Keppel-500 */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 173 75% 15%; /* Keppel-900 */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 174 85% 10%; /* Keppel-950 */
+    --muted-foreground: 173 38% 87%; /* Keppel-100 */
+    --accent: 173 55% 23%; /* Keppel-700 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 173 86% 19%; /* Keppel-800 */
+    --input: 173 55% 23%; /* Keppel-700 */
+    --ring: 173 77% 40%; /* Keppel-500 */
+    --chart-1: 173 77% 40%; /* Keppel-500 */
+    --chart-2: 173 55% 23%; /* Keppel-700 */
+    --chart-3: 174 85% 10%; /* Keppel-950 */
+    --chart-4: 173 66% 72%; /* Keppel-300 */
+    --chart-5: 173 38% 87%; /* Keppel-100 */
+    --sidebar-background: 173 77% 22%; /* Keppel-800 */
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 173 77% 40%; /* Keppel-500 */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 173 75% 15%; /* Keppel-900 */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 173 75% 15%; /* Keppel-900 */
+    --sidebar-ring: 173 77% 40%; /* Keppel-500 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[hsl(var(--border))];
+  }
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
