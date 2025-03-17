@@ -82,7 +82,7 @@ export default function ContestCalendar(): React.JSX.Element {
           abbr: "CF",
           bgColor: "bg-blue-600",
           textColor: "text-blue-400",
-          borderColor: "border-blue-500",
+          borderColor: "border border-blue-950",
           hoverBg: "hover:bg-blue-600",
         };
       case "leetcode":
@@ -90,7 +90,7 @@ export default function ContestCalendar(): React.JSX.Element {
           abbr: "LC",
           bgColor: "bg-yellow-500",
           textColor: "text-yellow-400",
-          borderColor: "border-yellow-500",
+          borderColor: "border border-yellow-950",
           hoverBg: "hover:bg-yellow-500",
         };
       case "codechef":
@@ -98,7 +98,7 @@ export default function ContestCalendar(): React.JSX.Element {
           abbr: "CC",
           bgColor: "bg-red-600",
           textColor: "text-red-400",
-          borderColor: "border-red-500",
+          borderColor: "border border-red-950",
           hoverBg: "hover:bg-red-600",
         };
       default:
@@ -106,7 +106,7 @@ export default function ContestCalendar(): React.JSX.Element {
           abbr: "XX",
           bgColor: "bg-gray-600",
           textColor: "text-gray-400",
-          borderColor: "border-gray-500",
+          borderColor: "border border-keppel-950",
           hoverBg: "hover:bg-gray-600",
         };
     }
@@ -135,7 +135,7 @@ export default function ContestCalendar(): React.JSX.Element {
           key={date}
           className={`h-[10rem] p-2 m-1 border-r border-neutral-700 ${bgColor}`}
         >
-          <div className="text-white mb-2 text-sm">{day}</div>
+          <div className="text-keppel-300 mb-2 text-sm">{day}</div>
           {contestsForDay.map((contest, index) => (
             <Link key={index} href={contest.url} target="_blank">
               <div
@@ -256,7 +256,7 @@ export default function ContestCalendar(): React.JSX.Element {
                 ].map((day, index) => (
                   <div
                     key={index}
-                    className="p-4 text-center text-gray-400 font-medium"
+                    className="p-4 text-center text-keppel-300 font-medium"
                   >
                     {day}
                   </div>
