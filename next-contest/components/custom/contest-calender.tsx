@@ -329,7 +329,7 @@ export default function ContestCalendar(): React.JSX.Element {
                   );
                 })
               ) : (
-                <div className="text-center py-8 text-gray-400">
+                <div className="text-center py-8 text-gray-400 text-xl md:text-3xl">
                   No upcoming contests this week.
                 </div>
               )}
