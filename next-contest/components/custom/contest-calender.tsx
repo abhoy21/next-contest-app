@@ -133,7 +133,7 @@ export default function ContestCalendar(): React.JSX.Element {
       calendarDays.push(
         <div
           key={date}
-          className={`h-[10rem] p-2 m-1 border-r border-neutral-700 ${bgColor}`}
+          className={`min-h-[10rem] overflow-x-auto p-2 m-1 border-r border-neutral-700 ${bgColor}`}
         >
           <div className="text-keppel-300 mb-2 text-sm">{day}</div>
           {contestsForDay.map((contest, index) => (
@@ -236,15 +236,15 @@ export default function ContestCalendar(): React.JSX.Element {
               </Button>
             </div>
             <div>
-              <h3 className="text-montserrat text-keppel-300">
+              <h3 className="hidden md:block text-montserrat text-keppel-300">
                 Tack Upcomming Contests for different platforms here
               </h3>
             </div>
           </div>
 
           <div className="overflow-x-auto">
-            <div className="min-w-[10rem]">
-              <div className="grid grid-cols-7 border-b border-neutral-700">
+            <div className="min-w-max">
+              <div className="grid grid-cols-7 border-b border-neutral-700 overflow-x-auto">
                 {[
                   "Sunday",
                   "Monday",
